@@ -48,7 +48,9 @@ export default function Calculator() {
 
   }
   const calculateResults = () => {
-    setResult(Number((Number(distance) / Number(speed)).toFixed(2)));
+    if (speed != undefined && distance != undefined) {
+      setResult(Number((Number(distance) / Number(speed)).toFixed(2)));
+    }
   }
 
   const resetFields = () => {
